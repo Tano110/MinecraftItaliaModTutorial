@@ -1,0 +1,5 @@
+#Blocks
+tile.testBlock.name=My First Block
+
+#Items
+item.testItem.name=My First Item
