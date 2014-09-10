@@ -3,3 +3,7 @@ tile.testBlock.name=My First Block
 
 #Items
 item.testItem.name=My First Item
+item.testHelmet.name=Test Helmet
+item.testChestplate.name=Test Chestplate
+item.testLeggins.name=Test Leggins
+item.testBoots.name=Test Boots
