@@ -12,14 +12,7 @@ public class TestArmor extends ItemArmor{
 	public TestArmor(ArmorMaterial material, int id, int placement){
 		super(material, id, placement);
 		
-		/*
-		 * 3=Elmo
-		 * 2=Corazza
-		 * 1=Gambali
-		 * 0=Stivali
-		 */
-		
-		switch(placement){
+		/*switch(placement){
 		case 0:
 			this.setTextureName(References.MODID + ":testHelmet");
 		case 1:
@@ -28,7 +21,16 @@ public class TestArmor extends ItemArmor{
 			this.setTextureName(References.MODID + ":testLeggins");
 		case 3:
 			this.setTextureName(References.MODID + ":testBoots");
-		}
+		}*/
+		
+		if(placement == 0)
+			this.setTextureName(References.MODID + ":testHelmet");
+		else if(placement == 1)
+			this.setTextureName(References.MODID + ":testChestplate");
+		else if(placement == 2)
+			this.setTextureName(References.MODID + ":testLeggins");
+		else if(placement == 3)
+			this.setTextureName(References.MODID + ":testBoots");
 		
 	}
 
