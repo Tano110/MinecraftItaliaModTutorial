@@ -18,6 +18,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -82,14 +83,21 @@ public class ExampleMod{
     	GameRegistry.registerItem(testLeggins, "testLeggins");
     	GameRegistry.registerItem(testBoots, "testBoots");
     	
-    	//Registriamo gli utensili
+    	// Registriamo gli utensili
     	GameRegistry.registerItem(testAxe, "testAxe");
 		GameRegistry.registerItem(testHoe, "testHoe");
 		GameRegistry.registerItem(testPickaxe, "testPickaxe");
 		GameRegistry.registerItem(testShovel, "testShovel");
 		GameRegistry.registerItem(testSword, "testSword");
 
-    	
+    	// Ricette!!!
+		GameRegistry.addRecipe(new ItemStack(testItem), "x x", " x ", "x x", 'x', Blocks.anvil);
+		GameRegistry.addShapelessRecipe(new ItemStack(testItem), "x", "x", 'x', Blocks.cactus);
+		GameRegistry.addRecipe(new ItemStack(testItem), "x", "x", "x",'x', Blocks.cactus);
+		GameRegistry.addRecipe(new ItemStack(testItem, 5), "x", "x", "x",'x', Blocks.end_stone);
+		GameRegistry.addRecipe(new ItemStack(testItem, 15), "x", "x", "x",'x', new ItemStack(Blocks.wool, 1, 4));
+		GameRegistry.addSmelting(Blocks.bookshelf, new ItemStack(testBlock), 0.5F);
+
     }
     
     @EventHandler
