@@ -12,17 +12,6 @@ public class TestArmor extends ItemArmor{
 	public TestArmor(ArmorMaterial material, int id, int placement){
 		super(material, id, placement);
 		
-		/*switch(placement){
-		case 0:
-			this.setTextureName(References.MODID + ":testHelmet");
-		case 1:
-			this.setTextureName(References.MODID + ":testChestplate");
-		case 2:
-			this.setTextureName(References.MODID + ":testLeggins");
-		case 3:
-			this.setTextureName(References.MODID + ":testBoots");
-		}*/
-		
 		if(placement == 0)
 			this.setTextureName(References.MODID + ":testHelmet");
 		else if(placement == 1)
