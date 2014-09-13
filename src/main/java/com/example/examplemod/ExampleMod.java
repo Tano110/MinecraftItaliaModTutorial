@@ -92,7 +92,7 @@ public class ExampleMod{
 
     	// Ricette!!!
 		GameRegistry.addRecipe(new ItemStack(testItem), "x x", " x ", "x x", 'x', Blocks.anvil);
-		GameRegistry.addShapelessRecipe(new ItemStack(testItem), "x", "x", 'x', Blocks.cactus);
+		GameRegistry.addShapelessRecipe(new ItemStack(testItem), new ItemStack(Blocks.cactus));
 		GameRegistry.addRecipe(new ItemStack(testItem), "x", "x", "x",'x', Blocks.cactus);
 		GameRegistry.addRecipe(new ItemStack(testItem, 5), "x", "x", "x",'x', Blocks.end_stone);
 		GameRegistry.addRecipe(new ItemStack(testItem, 15), "x", "x", "x",'x', new ItemStack(Blocks.wool, 1, 4));
