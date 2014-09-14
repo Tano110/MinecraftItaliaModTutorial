@@ -12,3 +12,6 @@ item.testHoe.name=Zappa Test
 item.testPickaxe.name=Piccone Test
 item.testShovel.name=Pala Test
 item.testSword.name=Spada Test
+
+#CreativeTab
+itemGroup.exampleCreativeTab=CreativeTab d'esempio

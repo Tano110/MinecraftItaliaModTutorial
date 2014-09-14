@@ -44,6 +44,9 @@ public class ExampleMod{
 	public static int legginsID;
 	public static int bootsID;
 	
+	// Creative Tab
+	public static CreativeTabs exampleTab = new CreativeTab(CreativeTabs.getNextID(), "Example CreativeTab");
+	
 	// Inizializziamo il materiale per Armatura
 	public static ArmorMaterial testArmorMaterial = new EnumHelper().addArmorMaterial("testArmorMaterial", 66, new int[]{6, 16, 12, 6}, 10);
 
@@ -51,9 +54,9 @@ public class ExampleMod{
 	public static ToolMaterial testMaterial = new EnumHelper().addToolMaterial("testMaterial", 3, 1024, 10.0f, 8.0f, 10);
 	
 	// Iniziallizziamo un blocco
-	public static Block testBlock = new TestBlock(Material.clay).setBlockName("testBlock").setCreativeTab(CreativeTabs.tabBlock).setLightLevel(1.0F).setBlockTextureName(References.MODID + ":testBlock");
+	public static Block testBlock = new TestBlock(Material.clay).setBlockName("testBlock").setCreativeTab(exampleTab).setLightLevel(1.0F).setBlockTextureName(References.MODID + ":testBlock");
 	// Iniziallizziamo un ogetto
-	public static Item testItem = new TestItem().setUnlocalizedName("testItem").setCreativeTab(CreativeTabs.tabMisc).setTextureName(References.MODID + ":testItem");
+	public static Item testItem = new TestItem().setUnlocalizedName("testItem").setCreativeTab(exampleTab).setTextureName(References.MODID + ":testItem");
 	
 	// Armatura
 	public static Item testHelmet = new TestArmor(testArmorMaterial, helmetID, 0).setUnlocalizedName("testHelmet").setCreativeTab(CreativeTabs.tabCombat);
@@ -61,14 +64,12 @@ public class ExampleMod{
 	public static Item testLeggins = new TestArmor(testArmorMaterial, legginsID, 2).setUnlocalizedName("testLeggins").setCreativeTab(CreativeTabs.tabCombat);
 	public static Item testBoots = new TestArmor(testArmorMaterial, bootsID, 3).setUnlocalizedName("testBoots").setCreativeTab(CreativeTabs.tabCombat);
 	
-	//Utensili
+	// Utensili
 	public static Item testAxe = new TestAxe(testMaterial).setUnlocalizedName("testAxe").setCreativeTab(CreativeTabs.tabTools).setTextureName(References.MODID+":testAxe");
 	public static Item testHoe = new TestHoe(testMaterial).setUnlocalizedName("testHoe").setCreativeTab(CreativeTabs.tabTools).setTextureName(References.MODID+":testHoe");
 	public static Item testPickaxe = new TestPick(testMaterial).setUnlocalizedName("testPickaxe").setCreativeTab(CreativeTabs.tabTools).setTextureName(References.MODID+":testPickaxe");
 	public static Item testShovel = new TestShovel(testMaterial).setUnlocalizedName("testShovel").setCreativeTab(CreativeTabs.tabTools).setTextureName(References.MODID+":testShovel");
 	public static Item testSword = new TestSword(testMaterial).setUnlocalizedName("testSword").setCreativeTab(CreativeTabs.tabCombat).setTextureName(References.MODID+":testSword");
-
-
 	
     @EventHandler
     public void preinit(FMLPreInitializationEvent event){

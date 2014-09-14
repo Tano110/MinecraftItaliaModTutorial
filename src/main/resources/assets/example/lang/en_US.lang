@@ -13,3 +13,6 @@ item.testHoe.name=Test Hoe
 item.testPickaxe.name=Test Pickaxe
 item.testShovel.name=Test Shovel
 item.testSword.name=Test Sword
+
+#CreativeTab
+itemGroup.exampleCreativeTab=Example CreativeTab
