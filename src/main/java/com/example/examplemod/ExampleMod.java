@@ -10,6 +10,7 @@ import com.example.examplemod.combat.TestSword;
 import com.example.examplemod.items.TestItem;
 import com.example.examplemod.proxy.CommonProxy;
 import com.example.examplemod.utilities.References;
+import com.example.examplemod.world.gen.ExampleWorldGen;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -55,6 +56,9 @@ public class ExampleMod{
 
 	//Inizializziamo il materiale per gli utensili
 	public static ToolMaterial testMaterial = new EnumHelper().addToolMaterial("testMaterial", 3, 1024, 10.0f, 8.0f, 10);
+	
+	// Gen
+	public static ExampleWorldGen worldGen = new ExampleWorldGen();
 	
 	// Iniziallizziamo un blocco
 	public static Block testBlock = new TestBlock(Material.clay).setBlockName("testBlock").setCreativeTab(exampleTab).setLightLevel(1.0F).setBlockTextureName(References.MODID + ":testBlock");
@@ -105,6 +109,8 @@ public class ExampleMod{
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(testItem), "x x", " z ", "y y", 'x', "logWood", 'y', Items.string, 'z', "record"));
 	
 		OreDictionary.registerOre("blockIron", testBlock);
+		
+		GameRegistry.registerWorldGenerator(worldGen, 1);
 		
     }
     
