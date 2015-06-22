@@ -2,6 +2,8 @@ package com.example.examplemod;
 
 import com.example.examplemod.armor.TestArmor;
 import com.example.examplemod.blocks.TestBlock;
+import com.example.examplemod.blocks.TestTEBlock;
+import com.example.examplemod.blocks.te.TestTE;
 import com.example.examplemod.combat.TestAxe;
 import com.example.examplemod.combat.TestHoe;
 import com.example.examplemod.combat.TestPick;
@@ -62,6 +64,8 @@ public class ExampleMod{
 	
 	// Iniziallizziamo un blocco
 	public static Block testBlock = new TestBlock(Material.clay).setBlockName("testBlock").setCreativeTab(exampleTab).setLightLevel(1.0F).setBlockTextureName(References.MODID + ":testBlock");
+    public static Block testTE = new TestTEBlock(Material.anvil).setBlockName("testTE").setCreativeTab(exampleTab);
+
 	// Iniziallizziamo un ogetto
 	public static Item testItem = new TestItem().setUnlocalizedName("testItem").setCreativeTab(exampleTab).setTextureName(References.MODID + ":testItem");
 	
@@ -83,6 +87,7 @@ public class ExampleMod{
     	
     	// Registriamo sia il blocco che l'oggetto
     	GameRegistry.registerBlock(testBlock, "testBlock");
+        GameRegistry.registerBlock(testTE, "testTE");
     	GameRegistry.registerItem(testItem, "testItem");
     	
     	// Registriamo l'armatura
@@ -116,7 +121,7 @@ public class ExampleMod{
     
     @EventHandler
     public void init(FMLInitializationEvent event){
-    	
+    	GameRegistry.registerTileEntity(TestTE.class, "testTE");
     }
     
     @EventHandler
