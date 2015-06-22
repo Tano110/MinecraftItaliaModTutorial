@@ -15,3 +15,12 @@
 /.classpath
 /.project
 /bin
+
+## intellij
+/out
+/.idea
+/*.iml
+/*.ipr
+/*.iws
+/atlassian-ide-plugin.xml
+*.db
