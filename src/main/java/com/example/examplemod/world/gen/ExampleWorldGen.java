@@ -31,7 +31,7 @@ public class ExampleWorldGen implements IWorldGenerator{
 	}
 	
 	private void generateInNether(World world, Random random, int x, int z) {
-		for (int i = 0; i < 300; i++){// 25 = rarita'
+		for (int i = 0; i < 300; i++){// 300 = rarita'
 			int chunkX = x + random.nextInt(16);
 			int chunkY = random.nextInt(256);
 			int chunkZ = z + random.nextInt(16);
